@@ -1,0 +1,12 @@
+class Solution:
+    def maximumSumSubarray (self,K,Arr,N):
+        maxsub=Arr[0]
+        n=len(Arr)
+        cursum=0
+        for i in range(0,n):
+            cursum=cursum+Arr[i]
+            if cursum>maxsub:
+                maxsub=cursum
+            if cursum<0:
+                cursum=0
+        return maxsub
